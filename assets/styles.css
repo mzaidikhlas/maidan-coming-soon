@@ -29,7 +29,8 @@ body{
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: 20% 60% 20%;
-    grid-template-areas: 'logo logo'
+    grid-template-areas:
+     'logo logo'
     'left screenshot'
     'socials socials';
 
@@ -124,15 +125,61 @@ input[type=submit]{
 
 .screenshot{
     grid-area: screenshot;
-
     display: block;
     margin-right: auto;
     margin-left: auto;
-
     margin-top: 10%;
 }
 
 .screenshot > img {
     width: 18vw;
     box-shadow: 0 3px 43px 0 rgba(0,0,0,0.50);
+}
+/* Phone mode */
+@media only screen 
+  and (max-device-width: 667px) {
+      body{
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 30% 60% 10%;
+        grid-template-areas:
+         'logo'
+        'left'
+        'socials';
+        padding-top: 1%;
+        padding-left: 15%;
+        padding-right: 10%;  
+      }
+     
+    .screenshot{
+        display: none;
+    }
+   .logo > img{
+      width: 66%;
+      position: relative;
+      left: 3em;
+      top: 2.5em;
+   }
+   .main-text{
+       font-size: 25px;
+       margin-top: 1.0em;
+       text-align: left;
+   }
+   .sub-text{
+       margin-top: 15px;
+   }
+   input[type=email]{
+       font-size: 19px;
+       margin-left:5px;
+       margin-top:50px;
+   }
+   input[type=submit]{
+       margin-left: 10px;
+       margin-top:25px;
+   }
+   .socials > a > img{
+    width: 8vw;
+    padding-right: 23px;
+    margin-top: 20px;
+   }
 }
