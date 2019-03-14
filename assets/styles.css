@@ -17,7 +17,7 @@
 }
 body{
     /*background-image: linear-gradient(-134deg, #60F282 0%, #56EB89 16%, #42DE95 46%, #24C9A9 100%); */
-    background: linear-gradient(66deg, #60f282, #56eb89, #42de95, #24c9a9);
+    background: linear-gradient(180deg, #42de95, #24c9a9, #60f282, #56eb89 );
     background-size: 700% 700%;
     
     -webkit-animation: maidan-background 8s ease infinite;
@@ -31,12 +31,16 @@ body{
     grid-template-rows: 20% 60% 20%;
     grid-template-areas:
      'logo logo'
-    'left screenshot'
+    'tables tables'
     'socials socials';
 
     padding-top: 1%;
     padding-left: 15%;
     padding-right: 10%;    
+}
+
+a{
+    color: white;
 }
 
 .logo{
@@ -48,9 +52,17 @@ body{
     
 }
 
+a > .logo > img{
+    width: 20%;
+}
+
 .left{
     grid-area: left;
     margin-top: 15%;
+}
+
+.main{
+    grid-area: tables;
 }
 
 
@@ -87,7 +99,7 @@ input[type=email]{
     
 }
 
-input[type=submit]{
+a > button {
     font-family: 'Montserrat', "sans-serif";
     font-size: 20px;
     color: #49E290;
@@ -103,7 +115,6 @@ input[type=submit]{
     padding-top: 8px;
     padding-bottom: 8px;
     margin-top: 20px;
-
     
 }
 
@@ -144,11 +155,11 @@ input[type=submit]{
         grid-template-rows: 30% 60% 10%;
         grid-template-areas:
          'logo'
-        'left'
+        'tables'
         'socials';
         padding-top: 1%;
-        padding-left: 15%;
-        padding-right: 10%;  
+        
+       
       }
      
     .screenshot{
@@ -159,11 +170,12 @@ input[type=submit]{
       position: relative;
       left: 3em;
       top: 2.5em;
+      padding-bottom: 1em;
    }
    .main-text{
        font-size: 25px;
        margin-top: 1.0em;
-       text-align: left;
+       text-align: center;
    }
    .sub-text{
        margin-top: 15px;
